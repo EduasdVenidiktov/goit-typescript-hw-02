@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}

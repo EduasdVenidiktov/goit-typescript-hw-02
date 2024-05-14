@@ -1,0 +1,37 @@
+.formContainer {
+  background-color: rgb(174, 247, 174);
+  border-radius: 36px;
+  border: 3px solid blue;
+  padding: 10px;
+  margin: 0 auto; /* Центрирование по горизонтали */
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start; /* Выравнивание по левому краю */
+}
+input {
+  margin-left: 10px;
+  border-radius: 36px;
+  width: 300px;
+  padding-left: 20px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:hover {
+  border: 1px solid transparent;
+}
+
+.btn {
+  background-color: rgb(174, 247, 174);
+  border: transparent;
+}
+.btn:hover {
+  transform: scale(1.1);
+  border: transparent;
+}

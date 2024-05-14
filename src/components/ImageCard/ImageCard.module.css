@@ -1,0 +1,12 @@
+.image {
+  cursor: pointer;
+  width: 320px;
+  height: 200px;
+  border-radius: 6px;
+
+  object-fit: cover; /* Добавлено для сохранения пропорций */
+}
+
+.image:hover {
+  transform: scale(1.04);
+}
