@@ -1,5 +1,5 @@
-function ErrorMessage() {
-  return alert("Щось пішло не так... 🙁");
+function ErrorMessage(): string {
+  return "Щось пішло не так... 🙁";
 }
 
 export default ErrorMessage;

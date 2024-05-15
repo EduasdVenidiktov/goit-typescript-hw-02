@@ -1,7 +1,12 @@
+import React from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
+import { ImageGalleryProps } from "./ImageGallery.types";
 
-const ImageGallery = ({ images, onImageClick }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({
+  images,
+  onImageClick,
+}) => {
   return (
     <ul className={css.itemList}>
       {images.map((image) => (
@@ -9,7 +14,7 @@ const ImageGallery = ({ images, onImageClick }) => {
           <ImageCard
             photo={image.urls.small}
             alt_description={image.alt_description}
-            onClick={() => onImageClick(image.urls.regular)}
+            onClick={() => onImageClick({ url: image.urls.regular })}
           />
         </li>
       ))}

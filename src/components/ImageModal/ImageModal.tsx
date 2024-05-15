@@ -1,6 +1,9 @@
 import Modal from "react-modal";
 import css from "./ImageModal.module.css";
-const customStyles = {
+import { KeyboardEvent } from "react";
+import { CustomStyles, ImageModalProps } from "./ImageModal.types";
+
+const customStyles: CustomStyles = {
   content: {
     top: "50%",
     left: "50%",
@@ -12,8 +15,8 @@ const customStyles = {
 };
 Modal.setAppElement("#root"); // Виановюємо #root як елемент DOM для модального окна
 
-function ImageModal({ isOpen, image, onClose }) {
-  const handleCloseModal = (ev) => {
+function ImageModal({ isOpen, image, onClose }: ImageModalProps) {
+  const handleCloseModal = (ev: KeyboardEvent<HTMLDivElement>) => {
     // Перевіряємо, чи була натиснута кнопка Esc
     if (ev.type === "keydown" && ev.key !== "Escape") {
       return;
@@ -33,8 +36,8 @@ function ImageModal({ isOpen, image, onClose }) {
         <button className={css.closeButton} onClick={onClose}>
           X
         </button>
-
-        <img src={image} width="800" />
+        {image && <img src={image} width="800" />}{" "}
+        {/* Додано перевірку на наявність image */}
       </Modal>
     </>
   );
