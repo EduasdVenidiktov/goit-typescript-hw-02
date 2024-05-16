@@ -1,9 +1,10 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
+import { Photo } from "./src/components/App/App.types";
 
 interface ApiResponse {
-  client_id: string;
-  query: string;
-  page: number;
+  total: number;
+  total_pages: number;
+  results: Photo[];
 }
 
 const fetchImages = async (
@@ -12,7 +13,7 @@ const fetchImages = async (
 ): Promise<ApiResponse> => {
   const apiKey = "_L4RsgQefhJUXVchOFXeVg7KvqNwVHRbh6wT5CFXwls";
 
-  const response = await axios.get<ApiResponse>(
+  const response: AxiosResponse<ApiResponse> = await axios.get(
     "https://api.unsplash.com/search/photos/",
     {
       params: {

@@ -36,7 +36,7 @@ const App = () => {
   };
 
   const handleImageClick = (image: Photo) => {
-    setSelectedImage(image);
+    setSelectedImage(image.url);
     setIsModalOpen(true);
   };
 

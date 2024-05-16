@@ -36,7 +36,8 @@ function ImageModal({ isOpen, image, onClose }: ImageModalProps) {
         <button className={css.closeButton} onClick={onClose}>
           X
         </button>
-        {image && <img src={image} width="800" />}{" "}
+        {image && typeof image === "string" && <img src={image} width="800" />}{" "}
+        {/* Добавлена проверка */}
         {/* Додано перевірку на наявність image */}
       </Modal>
     </>
