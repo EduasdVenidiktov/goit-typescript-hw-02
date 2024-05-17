@@ -12,9 +12,8 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
       {images.map((image) => (
         <li key={image.id}>
           <ImageCard
-            photo={image.urls.small}
-            alt_description={image.alt_description}
-            onClick={() => onImageClick({ url: image.urls.regular })}
+            image={image} // Передаємо весь об'єкт зображення
+            onImageClick={onImageClick} // Передаємо функцію
           />
         </li>
       ))}
@@ -23,25 +22,3 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({
 };
 
 export default ImageGallery;
-
-//=====================================================================================
-// import ImageCard from "../ImageCard/ImageCard";
-// import css from "./ImageGallery.module.css";
-
-// const ImageGallery = ({ images }) => {
-//   return (
-//     <ul className={css.itemList}>
-//       {images.map((image) => (
-//         <li key={image.id}>
-//           <ImageCard
-//             photo={image.urls.small}
-//             largePhoto={image.urls.regular}
-//             description={image.alt_description}
-//           ></ImageCard>
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// };
-
-// export default ImageGallery;

@@ -13,5 +13,3 @@ export interface ImageGalleryProps {
   images: Image[];
   onImageClick: (image: Photo) => void;
 }
-
-// url: string|

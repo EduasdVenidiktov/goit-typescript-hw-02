@@ -1,10 +1,10 @@
 import axios, { AxiosResponse } from "axios";
-import { Photo } from "./src/components/App/App.types";
+import { Image } from "./components/ImageGallery/ImageGallery.types";
 
 interface ApiResponse {
   total: number;
   total_pages: number;
-  results: Photo[];
+  results: Image[];
 }
 
 const fetchImages = async (
@@ -25,6 +25,6 @@ const fetchImages = async (
     }
   );
 
-  return response;
+  return response.data;
 };
 export default fetchImages;

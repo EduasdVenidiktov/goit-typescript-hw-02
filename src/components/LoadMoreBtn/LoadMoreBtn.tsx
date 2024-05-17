@@ -3,7 +3,7 @@ import { LoadMoreBtnProps } from "./LoadMoreBtn.types";
 
 const LoadMoreBtn: React.FC<LoadMoreBtnProps> = ({ onClick, query }) => {
   const handleClick = () => {
-    onClick(query); // Передаем текущее значение query при нажатии кнопки Load More
+    onClick(query); // Передаємо поточне значення query при натисканні кнопки Load More
   };
 
   return (

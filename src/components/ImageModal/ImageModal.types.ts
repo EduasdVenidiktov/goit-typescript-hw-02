@@ -1,6 +1,8 @@
+import { Photo } from "../App/App.types";
+
 export type ImageModalProps = {
   isOpen: boolean;
-  image: string | undefined;
+  image: Photo;
   onClose: () => void;
 };
 

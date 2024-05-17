@@ -4,7 +4,7 @@
   height: 200px;
   border-radius: 6px;
 
-  object-fit: cover; /* Добавлено для сохранения пропорций */
+  object-fit: cover; /* Додано для зберігання пропорцій */
 }
 
 .image:hover {

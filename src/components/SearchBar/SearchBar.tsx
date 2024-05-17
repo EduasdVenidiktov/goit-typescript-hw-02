@@ -12,9 +12,9 @@ const SearchBar = ({ onSubmit }: SearchBarProps) => {
       toast.error(" Please enter search term!");
       return;
     }
-    // После нажатия кнопки "Search" вызываем функцию onSubmit и передаем в нее значение query
+    // Після натискання кнопки "Search" викликаємо функцію onSubmit и передаємо до неї значення query
     onSubmit(query);
-    // Сбрасываем значение query после отправки формы, если не требуется сохранять его
+    // Скидуємо значення query післе відправлення форми, якщо не потрібно його зберігати
     setQuery("");
   };
 
